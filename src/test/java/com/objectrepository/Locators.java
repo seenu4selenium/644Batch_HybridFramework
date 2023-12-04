@@ -12,5 +12,11 @@ public class Locators {
 	public final By fblogin_Email_Editbox = By.name("email");
 	public final By fblogin_Password_Editbox = By.name("pass");
 	public final By fblogin_Login_Button = By.name("login");
+	//--------------------------<<<<<<<<<<ORANGEHRM--------------->>>>>>>>>>>>>>>>>>>>>>>>>>>
+		public final By orangehrm_username= By.xpath("//input[@placeholder='Username']");
+		public final By orangehrm_password= By.xpath("//input[@placeholder='Password']");
+		public final By orangehrm_submit= By.xpath("//button[@type='submit']");
+		public final By orangehrm_userdropdown= By.xpath("//p[@class='oxd-userdropdown-name']");
+		public final By orangehrm_logout= By.linkText("Logout");
 
 }
