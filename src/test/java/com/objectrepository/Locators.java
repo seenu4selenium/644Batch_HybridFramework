@@ -13,4 +13,18 @@ public class Locators {
 	public final By fblogin_Password_Editbox = By.name("pass");
 	public final By fblogin_Login_Button = By.name("login");
 
+	//OrangeHRM locators
+	public final By hrm_username_Editbox = By.name("username");
+	public final By hrm_password_Editbox = By.name("password");
+	public final By hrm_Login_Button = By.xpath("//*[@type='submit']");	
+	public final By hrm_profilepicture_icon = By.xpath("//*[contains(@class,'oxd-userdropdown-icon')]");
+	public final By hrm_Logout_linkText = By.linkText("Logout");
+
+	
+	//clg week live locators
+	public final By clg_CountryofCitizenship_dropdown = By.id("country");
+	public final By clg_iama_dropdown = By.name("attendeeType");
+
+	
+
 }

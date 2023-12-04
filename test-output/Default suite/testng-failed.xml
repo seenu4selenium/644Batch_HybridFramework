@@ -6,8 +6,9 @@
       <class name="com.testscenarios.FBlogin">
         <methods>
           <include name="beforeClass"/>
-          <include name="fblogin"/>
+          <include name="tc_01_login"/>
           <include name="afterClass"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- com.testscenarios.FBlogin -->
     </classes>
