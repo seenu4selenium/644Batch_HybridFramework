@@ -2,35 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T07:06:08 MST" name="Default suite" finished-at="2023-12-04T07:06:14 MST" duration-ms="5987">
+  <suite started-at="2023-12-05T07:09:06 MST" name="Default suite" finished-at="2023-12-05T07:09:23 MST" duration-ms="17391">
     <groups>
     </groups>
-    <test started-at="2023-12-04T07:06:08 MST" name="Default test" finished-at="2023-12-04T07:06:14 MST" duration-ms="5987">
-      <class name="com.testscenarios.CollegeLive">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.testscenarios.CollegeLive@408d971b]" started-at="2023-12-04T07:06:08 MST" name="beforeClass" finished-at="2023-12-04T07:06:11 MST" duration-ms="2673" status="PASS">
+    <test started-at="2023-12-05T07:09:06 MST" name="Default test" finished-at="2023-12-05T07:09:23 MST" duration-ms="17391">
+      <class name="com.testscenarios.AdvanceConcepts">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.testscenarios.AdvanceConcepts@5c33f1a9]" started-at="2023-12-05T07:09:06 MST" name="beforeClass" finished-at="2023-12-05T07:09:09 MST" duration-ms="2883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="ohrm_login()[pri:0, instance:com.testscenarios.CollegeLive@408d971b]" started-at="2023-12-04T07:06:11 MST" name="ohrm_login" finished-at="2023-12-04T07:06:14 MST" duration-ms="2650" status="PASS">
+        <test-method signature="tc_02_PopUpHandling()[pri:0, instance:com.testscenarios.AdvanceConcepts@5c33f1a9]" started-at="2023-12-05T07:09:09 MST" name="tc_02_PopUpHandling" finished-at="2023-12-05T07:09:23 MST" duration-ms="14460" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ohrm_login -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testscenarios.CollegeLive@408d971b]" started-at="2023-12-04T07:06:14 MST" name="afterMethod" finished-at="2023-12-04T07:06:14 MST" duration-ms="321" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ohrm_login status=SUCCESS method=CollegeLive.ohrm_login()[pri:0, instance:com.testscenarios.CollegeLive@408d971b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.testscenarios.CollegeLive@408d971b]" started-at="2023-12-04T07:06:14 MST" name="afterClass" finished-at="2023-12-04T07:06:14 MST" duration-ms="245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.testscenarios.CollegeLive -->
+        </test-method> <!-- tc_02_PopUpHandling -->
+      </class> <!-- com.testscenarios.AdvanceConcepts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscenarios.FBlogin">
+      <class name="com.testscenarios.AdvanceConcepts">
         <methods>
+          <include name="tc_01_AlretAccept"/>
           <include name="beforeClass"/>
-          <include name="tc_01_login"/>
-          <include name="afterClass"/>
-          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.testscenarios.FBlogin -->
+      </class> <!-- com.testscenarios.AdvanceConcepts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

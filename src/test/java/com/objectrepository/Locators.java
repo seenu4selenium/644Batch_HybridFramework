@@ -25,6 +25,16 @@ public class Locators {
 	public final By clg_CountryofCitizenship_dropdown = By.id("country");
 	public final By clg_iama_dropdown = By.name("attendeeType");
 
+	//DemoAlert page locators
+	public final By alert_alertButton = By.id("alertButton");
+	public final By alert_timerAlertButton = By.id("timerAlertButton");
+	public final By alert_confirmButton = By.id("confirmButton");
+
+	//JRI Locators
+	public final By jri_Facebook_button = By.xpath("//*[@title='Sign In with Facebook']");
+	public final By jri_Facebook_popup_loginButton = By.name("login");
+	public final By jri_Facebook_popup_emailEditbox = By.name("email");
+
 	
 
 }
