@@ -9,7 +9,9 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -21,6 +23,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.ITestResult;
 import java.util.Set;
 import com.objectrepository.Locators;
@@ -153,7 +156,50 @@ public class CommonFunctions {
 		// move cursor point to back to mainwindow
 		driver.switchTo().window(mainWindowName);
 	}
+	public static int getRandomNumber(int maxNumber) {
+		Random p = new Random();
+		System.out.println("maxNumber is" + " " + maxNumber);
 
+		int randomNumber = p.nextInt(maxNumber);
+		System.out.println("The Random number is" + " " + randomNumber);
+
+		if (randomNumber == 0) {
+			randomNumber = 1;
+			System.out.println("Replacing Random number '0' to " + randomNumber);
+		}
+
+		return randomNumber;
+
+	}
+	public void selectCustomiseOptionFromTheDropdownValues(By locater, String visibleText) {
+		WebElement element = driver.findElement(locater);
+		if (element.isDisplayed()) {
+			// isEnabled()
+			if (element.isEnabled()) {
+
+				Select dropdown = new Select(element);
+				List<WebElement> dropdownValues = dropdown.getOptions();// 5
+				// Print the size of dropdown values
+				System.out.println(dropdownValues.size());
+				// Print the dropdown values
+				for (int i = 0; i < dropdownValues.size(); i++) {
+					System.out.println(dropdownValues.get(i).getText());
+
+					// Select option from the dropdown
+					if (dropdownValues.get(i).getText().equals(visibleText)) {
+						dropdown.selectByIndex(i);
+						break;
+					}
+				}
+
+			} else {
+				System.out.println("The webelement is NOT Enabled, please check**************");
+			}
+		} else {
+			System.out.println("The webelement is NOT displayed, please check**************");
+		}
+
+	}
 	public void navigateToPopupWindow() throws InterruptedException {
 		// get the main windown name
 		String mainWindowName = driver.getWindowHandle();

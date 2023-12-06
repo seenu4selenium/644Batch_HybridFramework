@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscenarios.StqaTools">
+      <class name="com.testscenarios.OrangeHRM">
         <methods>
+          <include name="orangehrm"/>
           <include name="beforeClass"/>
-          <include name="stqa"/>
           <include name="afterClass"/>
         </methods>
-      </class> <!-- com.testscenarios.StqaTools -->
+      </class> <!-- com.testscenarios.OrangeHRM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
