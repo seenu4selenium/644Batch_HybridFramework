@@ -18,5 +18,8 @@ public class Locators {
 		public final By orangehrm_submit= By.xpath("//button[@type='submit']");
 		public final By orangehrm_userdropdown= By.xpath("//p[@class='oxd-userdropdown-name']");
 		public final By orangehrm_logout= By.linkText("Logout");
-
+		
+//-------------<<<<<<<<<<<STQA WEBSITE------>>>>>>>>>>>>>>>
+		public final By stqa_parent_newwindow= By.linkText("Click to open new Window");
+		public final By stqa_child_newwindow= By.linkText("New Message Window");
 }

@@ -17,7 +17,7 @@ public class OrangeHRM extends CommonFunctions {
 	@AfterClass // post-condition
 	public void afterClass() throws Exception {
 		System.out.println("@AfterClass block");
-		takeScreenshot("FBlogin");
+		takeScreenshot("OrangeHRM");
 		// close the browser
 		// driver.close();
 		driver.quit();
@@ -32,6 +32,7 @@ public class OrangeHRM extends CommonFunctions {
 //		Password : admin123
 //		2. After login, click on Profile icon
 //		3. Click on Logout text (Last option)
+		
 	
 		
 		

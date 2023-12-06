@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 
@@ -20,7 +21,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.safari.SafariDriver;
-
+import org.testng.ITestResult;
+import java.util.Set;
 import com.objectrepository.Locators;
 
 public class CommonFunctions {
@@ -84,6 +86,115 @@ public class CommonFunctions {
 		prop.load(fi);
 		driver.get(prop.getProperty(URL));
 		System.out.println("*****URL placed on Browser  Successfully");
+	}
+	public void screenshotWithStatus(ITestResult res) throws Exception {
+		String projectDir = System.getProperty("user.dir");
+		String screenshotPath = projectDir + "\\screenshots\\";
+		String className = res.getTestClass().getName().trim(); // OrangeHRM
+		String methodName = res.getName().trim();
+		// STATUS_PackageName.ClassName_MethodName_Timestamp.PNG
+		if (res.getStatus() == ITestResult.SUCCESS) {
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileHandler.copy(scrFile,
+					new File(screenshotPath + "PASS_" + className + "_" + methodName + "_" + timeStamp() + ".PNG"));
+		}
+		if (res.getStatus() == ITestResult.FAILURE) {
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileHandler.copy(scrFile,
+					new File(screenshotPath + "FAIL_" + className + "_" + methodName + "_" + timeStamp() + ".PNG"));
+		}
+		if (res.getStatus() == ITestResult.SKIP) {
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileHandler.copy(scrFile,
+					new File(screenshotPath + "SKIP_" + className + "_" + methodName + "_" + timeStamp() + ".PNG"));
+		}
+	}
+	/************** Alert Handle *************************/
+	public void alertHandleByAccept() {
+		//Alert alert = driver.switchTo().alert();
+		String alertText = driver.switchTo().alert().getText();
+		System.out.println("Alert text is: " + alertText);
+		//To click on OK button / Yes button
+		driver.switchTo().alert().accept();
+	}
+
+	public void alertHandleByDismiss() {
+		//Alert alert = driver.switchTo().alert();
+		String alertText = driver.switchTo().alert().getText();
+		System.out.println("Alert text is: " + alertText);
+		//To click on Cancel button / No button
+		driver.switchTo().alert().dismiss();
+	}
+	/************
+	 * popupHandle
+	 * 
+	 * @throws InterruptedException
+	 *********************************/
+	public void popupHandleToCloseChildWindow() throws InterruptedException {
+		// get the main windown name
+		String mainWindowName = driver.getWindowHandle();
+		System.out.println("mainWindowName:" + mainWindowName);
+
+		Set<String> allWindowNames = driver.getWindowHandles();// 4
+		System.out.println("allWindowNames:" + allWindowNames);
+
+		// Close the child window (popups)
+		// for (int i = 0; i < array.length; i++) { }
+		for (String childWindowName : allWindowNames) {
+			// validate the window name is parent window /Child window?
+			if (!mainWindowName.equals(childWindowName)) {
+				// switch to child window
+				driver.switchTo().window(childWindowName);
+				Thread.sleep(3000);
+				// Close my child window
+				driver.close();
+			}
+		}
+		// move cursor point to back to mainwindow
+		driver.switchTo().window(mainWindowName);
+	}
+
+	public void navigateToPopupWindow() throws InterruptedException {
+		// get the main windown name
+		String mainWindowName = driver.getWindowHandle();
+		System.out.println("mainWindowName:" + mainWindowName);
+		Set<String> allWindowNames = driver.getWindowHandles();
+		java.util.Set<String> allWindowNames1 = driver.getWindowHandles();// 4
+		System.out.println("allWindowNames1:" + allWindowNames1);
+
+		// Close the child window (popups)
+		// for (int i = 0; i < array.length; i++) { }
+		for (String string : allWindowNames1) {
+			
+			// validate the window name is parent window /Child window?
+			if (!mainWindowName.equals(string)) {
+				// switch to the child window
+				driver.switchTo().window(string);
+				Thread.sleep(3000);
+			}
+		}
+driver.manage().window().maximize();
+	}
+
+	/*********** SwithchToWindow using Tab ***************************/
+	public void switchToNewTab() {		
+		ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(allTabs.get(1));
+	}
+
+	/***********
+	 * SwithchToWindow using Tab then close the New Tab againg back to Parent Window
+	 ***************************/
+	public void switchAndCloseNewTab() {
+		// Get the current window handle
+		String parentWindow = driver.getWindowHandle();
+		// Switch to New tab [chilld window]
+		ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(allTabs.get(1));
+		// Close the newly Opened Window[chilld window]
+		driver.close();
+		// Switch back to original window[parentWindow]
+		driver.switchTo().window(parentWindow);
 	}
 
 	/*** SendKeys by using any Locator ******/
