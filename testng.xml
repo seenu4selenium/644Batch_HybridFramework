@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+  <test thread-count="5" name="MyTestSuiteResults">
+    <classes>
+      <class name="com.testscenarios.FBlogin"/>
+      <class name="com.testscenarios.OrangeHRM"/>
+      <class name="com.testscenarios.StqaTools"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

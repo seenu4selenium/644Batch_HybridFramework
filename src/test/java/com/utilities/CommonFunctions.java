@@ -219,7 +219,7 @@ public class CommonFunctions {
 				Thread.sleep(3000);
 			}
 		}
-driver.manage().window().maximize();
+
 	}
 
 	/*********** SwithchToWindow using Tab ***************************/
@@ -234,7 +234,7 @@ driver.manage().window().maximize();
 	public void switchAndCloseNewTab() {
 		// Get the current window handle
 		String parentWindow = driver.getWindowHandle();
-		// Switch to New tab [chilld window]
+		// Switch to New tab [child window]
 		ArrayList<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(allTabs.get(1));
 		// Close the newly Opened Window[chilld window]
