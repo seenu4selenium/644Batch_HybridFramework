@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-05T07:09:06 MST" name="Default suite" finished-at="2023-12-05T07:09:23 MST" duration-ms="17391">
+  <suite started-at="2023-12-20T07:14:59 MST" name="Default suite" finished-at="2023-12-20T07:15:29 MST" duration-ms="29923">
     <groups>
     </groups>
-    <test started-at="2023-12-05T07:09:06 MST" name="Default test" finished-at="2023-12-05T07:09:23 MST" duration-ms="17391">
-      <class name="com.testscenarios.AdvanceConcepts">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.testscenarios.AdvanceConcepts@5c33f1a9]" started-at="2023-12-05T07:09:06 MST" name="beforeClass" finished-at="2023-12-05T07:09:09 MST" duration-ms="2883" status="PASS">
+    <test started-at="2023-12-20T07:14:59 MST" name="Default test" finished-at="2023-12-20T07:15:29 MST" duration-ms="29923">
+      <class name="com.testscenarios.ReadDataFromExcel">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.ReadDataFromExcel@595b007d]" started-at="2023-12-20T07:14:59 MST" name="f" finished-at="2023-12-20T07:14:59 MST" duration-ms="605" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="tc_02_PopUpHandling()[pri:0, instance:com.testscenarios.AdvanceConcepts@5c33f1a9]" started-at="2023-12-05T07:09:09 MST" name="tc_02_PopUpHandling" finished-at="2023-12-05T07:09:23 MST" duration-ms="14460" status="PASS">
+        </test-method> <!-- f -->
+        <test-method signature="hrm_login()[pri:0, instance:com.testscenarios.ReadDataFromExcel@595b007d]" started-at="2023-12-20T07:14:59 MST" name="hrm_login" finished-at="2023-12-20T07:15:29 MST" duration-ms="29283" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc_02_PopUpHandling -->
-      </class> <!-- com.testscenarios.AdvanceConcepts -->
+        </test-method> <!-- hrm_login -->
+      </class> <!-- com.testscenarios.ReadDataFromExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscenarios.AdvanceConcepts">
+      <class name="com.testscenarios.ReadDataFromExcel">
         <methods>
-          <include name="tc_01_AlretAccept"/>
-          <include name="beforeClass"/>
+          <include name="hrm_login"/>
         </methods>
-      </class> <!-- com.testscenarios.AdvanceConcepts -->
+      </class> <!-- com.testscenarios.ReadDataFromExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
