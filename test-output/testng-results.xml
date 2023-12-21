@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-20T07:14:59 MST" name="Default suite" finished-at="2023-12-20T07:15:29 MST" duration-ms="29923">
+  <suite started-at="2023-12-21T07:02:54 MST" name="Default suite" finished-at="2023-12-21T07:03:55 MST" duration-ms="60974">
     <groups>
     </groups>
-    <test started-at="2023-12-20T07:14:59 MST" name="Default test" finished-at="2023-12-20T07:15:29 MST" duration-ms="29923">
-      <class name="com.testscenarios.ReadDataFromExcel">
-        <test-method signature="f()[pri:0, instance:com.testscenarios.ReadDataFromExcel@595b007d]" started-at="2023-12-20T07:14:59 MST" name="f" finished-at="2023-12-20T07:14:59 MST" duration-ms="605" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method signature="hrm_login()[pri:0, instance:com.testscenarios.ReadDataFromExcel@595b007d]" started-at="2023-12-20T07:14:59 MST" name="hrm_login" finished-at="2023-12-20T07:15:29 MST" duration-ms="29283" status="PASS">
+    <test started-at="2023-12-21T07:02:54 MST" name="Default test" finished-at="2023-12-21T07:03:55 MST" duration-ms="60974">
+      <class name="com.testscenarios.ReadMultipleTestDataFromExcel">
+        <test-method signature="hrm_login()[pri:0, instance:com.testscenarios.ReadMultipleTestDataFromExcel@5158b42f]" started-at="2023-12-21T07:02:54 MST" name="hrm_login" finished-at="2023-12-21T07:03:55 MST" duration-ms="60906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hrm_login -->
-      </class> <!-- com.testscenarios.ReadDataFromExcel -->
+      </class> <!-- com.testscenarios.ReadMultipleTestDataFromExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

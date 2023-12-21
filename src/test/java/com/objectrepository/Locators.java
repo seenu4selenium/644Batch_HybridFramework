@@ -19,6 +19,8 @@ public class Locators {
 	public final By hrm_Login_Button = By.xpath("//*[@type='submit']");	
 	public final By hrm_profilepicture_icon = By.xpath("//*[contains(@class,'oxd-userdropdown-icon')]");
 	public final By hrm_Logout_linkText = By.linkText("Logout");
+	
+	public final By hrm_ErrorMsg = By.xpath("//p[.='Invalid credentials']");
 
 	
 	//clg week live locators
